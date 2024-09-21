@@ -1,0 +1,27 @@
+# OS-specifika filer
+.DS_Store
+Thumbs.db
+
+# NPM och Node.js-relaterade filer
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+
+# IDE/editor-specifika filer
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Loggfiler
+*.log
+
+# Byggrelaterade filer
+dist/
+build/
+
+# Miljöfiler
+.env
+.env.local
