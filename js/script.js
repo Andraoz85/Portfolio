@@ -1,5 +1,23 @@
 // script.js
 
+
+// Funktion för att toggla hamburgermenyn
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('#nav-menu a'); // Alla länkar i menyn
+
+hamburger.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
+
+// Stäng menyn när en länk klickas
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active'); // Stänger menyn efter klick
+  });
+});
+
+
 // projektdata
 const projects = [
   {
@@ -117,7 +135,7 @@ function loadProjects() {
     if (project.liveLink) {
       const liveLink = document.createElement("a");
       liveLink.href = project.liveLink;
-      liveLink.textContent = "Live";
+      liveLink.textContent = "Webpage";
       liveLink.target = "_blank";
       liveLink.rel = "noopener noreferrer"; // För säkerhet
       linkContainer.appendChild(liveLink);
